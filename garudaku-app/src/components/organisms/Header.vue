@@ -10,7 +10,8 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div style="display: flex; justify-content: space-between; margin-left: 20px; margin-right: 20px;">
         <Logo/>
+        <h2>Wikarsa Hamdany</h2>
     </div>
 </template>

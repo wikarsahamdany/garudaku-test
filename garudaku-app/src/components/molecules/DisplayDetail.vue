@@ -4,7 +4,7 @@ import { mapActions, mapState } from 'vuex';
 export default {
     name: "DisplayDetail",
     created() {
-
+        
     },
     computed: {
         ...mapState(["detailData"])

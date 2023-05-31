@@ -33,10 +33,14 @@ export default {
 
 <template>
     <section>
-        <Header />
+        <Header data-aos="fade-left" data-aos-delay="500" />
         <Detail v-if="showDetail" />
-        <ContentHead/>
-        <Content/>
+        <ContentHead data-aos="fade-right" data-aos-duration="1000"/>
+        <Content />
     </section>
 </template >
+
+<style scoped>
+section{overflow-x: hidden;}
+</style>
         
