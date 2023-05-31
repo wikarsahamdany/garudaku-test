@@ -10,7 +10,8 @@ export default new Vuex.Store({
     BASE_URL: "https://the-lazy-media-api.vercel.app/api",
     newsData: [],
     marqueeData: [],
-    detailData: {}
+    detailData: {},
+    isLoading: true
   },
   getters: {},
   mutations: {
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     updateDetail(state, data){
       state.detailData = data
+    },
+    updateLoading(state, data){
+      state.isLoading = data
     }
   },
   actions: {
@@ -56,8 +60,8 @@ export default new Vuex.Store({
 
         context.commit("updateDetail", data)
 
+        context.commit("updateLoading", false)
 
-        router.push(`/detail/${key}`)
       } catch (err) {
         console.log(err)
       }

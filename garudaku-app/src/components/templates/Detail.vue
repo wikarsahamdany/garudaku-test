@@ -1,4 +1,5 @@
 <script>
+import { mapActions } from 'vuex';
 import Button from '../atoms/Button.vue';
 import Logo from '../atoms/Logo.vue';
 import Form from '../molecules/Form.vue';
@@ -43,7 +44,8 @@ export default {
                 timer: 6000,
                 backdrop: false
             })
-        }
+        },
+
     }
 }
 </script>
@@ -53,9 +55,9 @@ export default {
         <Logo />
         <Form v-if="showModal === true" :closeModal="closeModal" @handleSubmit="handleSubmit" />
         <div class="main">
-            <router-link to="/">
-                <Button />
-            </router-link>
+
+            <Button />
+
             <button @click.prevent="openModal" class="main-button">Edit</button>
             <ContentDetail :contentData="contentData" />
         </div>

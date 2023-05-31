@@ -7,7 +7,8 @@ export default {
     name: "Card",
     methods: {
         ...mapActions(["handleDetail"]),
-        getDetail(key) {
+        async getDetail(key) {
+            this.$router.push(`/detail/${key}`)
             this.handleDetail(key)
         }
     }
