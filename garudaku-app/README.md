@@ -17,3 +17,5 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# try hard to learn how to Update with no any update endpoint
