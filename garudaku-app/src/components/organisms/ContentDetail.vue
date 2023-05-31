@@ -62,8 +62,8 @@ export default {
             <p style="color: gray;">{{ detailData.results.date }} | by {{ detailData.results.author }}</p>
             <div v-if="showEditor">
                 <ckeditor v-model="editorData"></ckeditor>
-                <button @click.prevent="saveContent(editorData)">Simpan</button>
-                <button @click.prevent="cancelContent">cancel</button>
+                <button @click.prevent="saveContent(editorData)">Save</button>
+                <button @click.prevent="cancelContent">Cancel</button>
             </div>
             <div v-else>
                 <div v-html="removePTag(editorData)"></div>
